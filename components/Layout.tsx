@@ -1,12 +1,7 @@
-import Link from "next/link";
-import React, { ReactNode } from "react";
+import { ILayoutProps } from "../utils/types";
 import Footer from "./Footer";
 import Header from "./Header";
-
-type ILayoutProps = {
-	meta: ReactNode;
-	children: ReactNode;
-};
+import { NextLink } from "./utilities";
 
 const Layout = (props: ILayoutProps) => {
 	return (
@@ -16,9 +11,11 @@ const Layout = (props: ILayoutProps) => {
 			<Header />
 
 			<div className="container mx-auto my-10">
-				<Link href="/">
-					<a className=" mt-10 bg-slate-300 py-2 px-3 rounded">Back to Home</a>
-				</Link>
+				<NextLink
+					slug="/"
+					title="Back to Home"
+					style="mt-10 bg-slate-300 py-2 px-3 rounded"
+				/>
 			</div>
 
 			<div className="container mx-auto">{props.children}</div>

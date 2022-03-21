@@ -2,7 +2,7 @@ import Head from "next/head";
 
 type IMetaProps = {
 	title: string;
-	description: string;
+	description?: string;
 };
 
 const Meta = (props: IMetaProps) => {

@@ -1,27 +1,21 @@
-import Link from "next/link";
-import React from "react";
-
-interface INavItem {
-	slug: string;
-	title: string;
-}
-
-const NavItem = ({ slug, title }: INavItem) => {
-	return (
-		<Link href={slug}>
-			<a className="text-xl text-yellow-300 border-b-2 border-transparent hover:border-yellow-300">{title}</a>
-		</Link>
-	);
-};
+import { NextLink } from "./utilities";
 
 const Header = () => {
 	return (
 		<div className="w-full bg-teal-800 text-white py-2">
 			<div className="container mx-auto flex items-center justify-between">
-				<div className="font-bold text-2xl">Learn NextJS</div>
+				<NextLink slug="/" title="Learn NextJS" style="text-2xl font-bold" />
 				<div className="flex gap-5">
-					<NavItem slug="/" title="Home" />
-					<NavItem slug="/about" title="About" />
+					<NextLink
+						slug="/"
+						title="Home"
+						style="text-xl text-yellow-300 border-b-2 border-transparent hover:border-yellow-300"
+					/>
+					<NextLink
+						slug="/about"
+						title="About"
+						style="text-xl text-yellow-300 border-b-2 border-transparent hover:border-yellow-300"
+					/>
 				</div>
 			</div>
 		</div>
