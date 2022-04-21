@@ -12,6 +12,11 @@ const Header = () => {
 						style="text-xl text-yellow-300 border-b-2 border-transparent hover:border-yellow-300"
 					/>
 					<NextLink
+						slug="/users"
+						title="Users"
+						style="text-xl text-yellow-300 border-b-2 border-transparent hover:border-yellow-300"
+					/>
+					<NextLink
 						slug="/about"
 						title="About"
 						style="text-xl text-yellow-300 border-b-2 border-transparent hover:border-yellow-300"
