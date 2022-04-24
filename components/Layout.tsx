@@ -23,7 +23,7 @@ const Layout = (props: ILayoutProps) => {
 				</div>
 			)}
 
-			<div className="container mx-auto h-[70vh]">{props.children}</div>
+			<div className="container mx-auto min-h-[80vh]">{props.children}</div>
 
 			<Footer />
 		</>
